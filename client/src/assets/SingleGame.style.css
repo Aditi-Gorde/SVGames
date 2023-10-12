@@ -1,0 +1,25 @@
+.btn {
+    color: black;
+    border: 1px solid rgb(222, 214, 201);
+  }
+  
+  .btn:hover{
+    background-color: rgb(50, 48, 48);
+    color: #fff;
+  }
+
+  .ac {
+    background-color: rgb(222, 214, 201);
+    color: #fff;
+  }
+
+  .ac:hover{
+    background-color: rgb(50, 48, 48);
+    color: #fff;
+  }
+
+  #dropdown-basic {
+    background-color: #10195d;
+    color: white;
+    margin-left: 1rem;
+  }

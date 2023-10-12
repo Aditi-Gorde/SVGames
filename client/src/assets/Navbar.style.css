@@ -1,0 +1,49 @@
+.nav_signup{
+    margin-right: 1rem;
+    color: black;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid rgb(222, 214, 201);
+    border-radius: 5rem;
+}
+
+.nav_signup:hover{
+  background-color: rgb(50, 48, 48);
+  color: #fff;
+}
+
+.nav_login{
+    margin-right: 1rem;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5rem;
+    background-color: #10195d;
+}
+
+.nav_login:hover{
+  background-color: rgb(50, 48, 48);
+  color: #fff;
+}
+
+.btn {
+  color: black;
+  border: 1px solid rgb(222, 214, 201);;
+}
+
+.btn:hover{
+  background-color: rgb(50, 48, 48);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+.navbar-item{
+  margin-top: 1.5rem;
+}
+}

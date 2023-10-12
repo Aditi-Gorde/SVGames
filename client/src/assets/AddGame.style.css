@@ -1,0 +1,25 @@
+.AddBook-main {
+    background-image: url("https://images.unsplash.com/photo-1547104442-044448b73426?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1935&q=80");
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.heading {
+    padding-top: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: end;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+}
+
+.ac {
+    background-color: #10195d!important;
+    color: white;
+  }
+
+  .ac:hover{
+    background-color: #b76c80;
+    color: #fff;
+  }

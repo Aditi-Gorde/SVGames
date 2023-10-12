@@ -1,0 +1,34 @@
+
+
+@media (max-width: 768px) {
+  .book-container {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.heading {
+  padding-top: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-items: end;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 2.5rem;
+}
+
+.book-container {
+width: 100%;
+padding: 2rem;
+display:flex;
+flex-wrap: wrap;
+justify-content:space-between;
+}
+
+.AddBookbtn {
+    background-color: #10195d;
+    color: white;
+}
+
+.row {
+  --bs-gutter-x: 5.5rem;
+}
