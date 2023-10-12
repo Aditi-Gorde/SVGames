@@ -33,7 +33,7 @@ const AddGame = () => {
 
   const sendRequest = async () => {
     await axios
-      .post(`http://localhost:5000/games`, {
+      .post(`${process.env.REACT_APP_backend_url}/games`, {
         Name:String(inputs.Name),
         Url:String(inputs.Url),
         Authors:String(inputs.Authors),
@@ -45,7 +45,7 @@ const AddGame = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(inputs, checked);
-    sendRequest().then(() => history("/"));
+    sendRequest().then(() => history("/AllGames"));
   };
 
   return (

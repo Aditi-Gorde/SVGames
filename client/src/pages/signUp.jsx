@@ -25,7 +25,7 @@ const initialValues = {
 
 export const SignUp = () => {
 
-    const backendApi = "http://localhost:5000";
+    const backendApi = process.env.REACT_APP_backend_url;
 
 
     const navigate = useNavigate()

@@ -64,14 +64,14 @@ const addGame = async (req, res, next) => {
     const { Name,
      Url,
     Authors,
-    Publication_date } = req.body;
+    Published_date } = req.body;
     let game;
     try {
       game = await Game.findByIdAndUpdate(id, {
       Name,
       Url,
       Authors,
-      Publication_date
+      Published_date
       });
       game = await Game.save();
     } catch (err) {

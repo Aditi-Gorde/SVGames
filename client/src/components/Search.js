@@ -2,13 +2,8 @@
 
 import React, { useState } from 'react'
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
-import { NavLink } from "react-router-dom";
-import { useLogout } from "../hooks/useLogout";
-import { useAuthContext } from "../hooks/useAuthContext";
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../assets/Navbar.style.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import axios from 'axios';
 
 export default function Search({ onSearch }) {
@@ -17,7 +12,7 @@ export default function Search({ onSearch }) {
 
     const handleSearch = async () => {
         try {
-            await axios.get(`http://localhost:5000/games?question=${query}`)
+            await axios.get(`${process.env.REACT_APP_backend_url}/games?question=${query}`)
             .then((response) => {
                 onSearch(response.data)
             });

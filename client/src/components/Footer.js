@@ -9,7 +9,7 @@ import 'font-awesome/css/font-awesome.min.css';
 function Footer() {
   return (
     <>
-    <footer className="footer" style={{marginTop:'3rem'}}>
+    <footer className="footer" style={{marginTop:'1rem'}}>
       <div className="container">
         <div className="row">
           <div className="col-md-4">

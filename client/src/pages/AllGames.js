@@ -19,7 +19,7 @@ function AllBooks() {
     // Fetch books from the API
     //?page=${currentPage}
     axios
-      .get(`http://localhost:5000/games/?page=${currentPage}`)
+      .get(`${process.env.REACT_APP_backend_url}/games/?page=${currentPage}`)
       .then((response) => {
         setGames(response.data.games);
       })

@@ -7,7 +7,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 import '../assets/SingleGame.style.css';
-import { red } from '@mui/material/colors';
 import { useAuthContext } from '../hooks/useAuthContext';
 
 
@@ -16,8 +15,8 @@ function SingleGame({ game }) {
 
   const history = useNavigate();
   const _id = game._id;
-  console.log(game._id);
   const deleteHandler = async () => {
+    console.log(_id);
     await axios
       .delete(`http://localhost:5000/games/${_id}`)
       .then((res) => res.data)
@@ -29,12 +28,22 @@ function SingleGame({ game }) {
     history(`/GameDetail/${_id}`)
   }
 
-  console.log(_id);
   const [selectedOption, setSelectedOption] = useState('Edit');
 
   const handleDropdownSelect = (option) => {
     setSelectedOption(option);
   };
+
+  const { format } = require('date-fns');
+
+  const dbDateTime = new Date(game.Published_date);
+
+  // Convert datetime to date with a specific format
+  const formattedDate = format(dbDateTime, 'MM/dd/yyyy');
+  
+  
+
+
 
   return (
     <Card  style={{ width:'100%'}}>
@@ -51,7 +60,7 @@ function SingleGame({ game }) {
       <ListGroup className="list-group-flush">
         <ListGroup.Item style={{ height: '4rem' }} >Authors : {game.Authors}</ListGroup.Item>
         {/* <ListGroup.Item style={{ height: '4rem' }}>Url : {game.Url}</ListGroup.Item> */}
-        <ListGroup.Item style={{ height: '4rem' }}>Published Date : {game.Published_date}</ListGroup.Item>
+        <ListGroup.Item style={{ height: '4rem' }}>Published Date : {formattedDate}</ListGroup.Item>
         {/* <Link to={`/AllBooks/${book._id}`}>Details</Link> */}
         {user ? (
           <div className="list-group-flush mx-auto">
@@ -62,7 +71,7 @@ function SingleGame({ game }) {
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
                   <Dropdown.Item eventKey="Update" onClick={() => updateHandler(_id)}>Update</Dropdown.Item>
-                  <Dropdown.Item onClick={() => deleteHandler} eventKey="Delete">Delete</Dropdown.Item>
+                  <Dropdown.Item onClick={() => deleteHandler(_id)} eventKey="Delete">Delete</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </ListGroup.Item>
