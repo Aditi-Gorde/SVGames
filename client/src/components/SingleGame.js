@@ -18,7 +18,7 @@ function SingleGame({ game }) {
   const deleteHandler = async () => {
     console.log(_id);
     await axios
-      .delete(`http://localhost:5000/games/${_id}`)
+      .delete(`${process.env.REACT_APP_backend_url}/games/${_id}`)
       .then((res) => res.data)
       .then(() => history("/login"))
       .then(() => history("/"))
