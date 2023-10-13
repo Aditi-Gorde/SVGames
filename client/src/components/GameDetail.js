@@ -34,7 +34,7 @@ import {
           Name:String(inputs.Name),
           Url:String(inputs.Url),
           Authors:String(inputs.Authors),
-          Published_date:Date(inputs.publication_date),
+          Published_date:Date(inputs.Published_date),
         })
         .then((res) => res.data);
     };

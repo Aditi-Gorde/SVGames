@@ -62,7 +62,7 @@ const addGame = async (req, res, next) => {
   const updateGame = async (req, res, next) => {
     const id = req.params.id;
     const { Name,
-     Url,
+    Url,
     Authors,
     Published_date } = req.body;
     let game;
